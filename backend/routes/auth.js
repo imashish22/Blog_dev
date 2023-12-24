@@ -38,7 +38,7 @@ router.post("/login",async (req,res)=>{
         const {password,...info}=user._doc
         console.log('cookie being sent')
         res.cookie("token",token,{httpOnly: true, secure: true,}).status(200).json(info)
-        console.log('cookie ')
+        console.log('cookie')
 
     }
     catch(err){
